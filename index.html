@@ -9,10 +9,10 @@
       function togglePlaylist(playlistId) {
         const playlist = document.getElementById(playlistId);
         const videoContainer = playlist.querySelector(".video-container");
-        if (videoContainer.style.display !== "none") {
+        if (videoContainer.style.display === "block") {
           videoContainer.style.display = "none";
         } else {
-          videoContainer.style.display = "grid";
+          videoContainer.style.display = "block";
         }
       }
     </script>
@@ -26,8 +26,6 @@
         <div id="watch-now" class="playlist">
           <h2>Watch Now</h2>
           <iframe
-            width="560"
-            height="315"
             src="https://www.youtube.com/embed/i0cdKQsPPGA?si=tOfSZu9C6fl8fHgB"
             title="YouTube video player"
             frameborder="0"
