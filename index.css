@@ -1,0 +1,78 @@
+@font-face {
+    font-family: Minecraft;
+    src: url("mac\'s\ Extended\ Minecraft.ttf");
+}
+
+body {
+    margin: 2em;
+    /* background: radial-gradient(white, bisque); */
+    background-color: bisque;
+    /* background-image: url("../Figure_1.png"); */
+    /* background-size: cover; */
+    /* font-family: sans-serif; */
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    font-family: Minecraft;
+    color: white;
+}
+
+h2 {
+    text-shadow: 4px 4px gray;
+    /* box-shadow: 4px 4px gray; */
+}
+
+h1 {
+    text-shadow: 0 0 8px black;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+}
+
+iframe {
+    border-radius: 8px;
+}
+
+.playlist {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: chocolate;
+    gap: 1em;
+    padding: 1em;
+    border-radius: 10px;
+    box-shadow: 5px 5px 0 rgb(111, 56, 16);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+.video-container {
+    display: none;
+    grid-template-columns: 25% 25% 25% 25%;
+    gap: 1em;
+}
+
+button {
+    padding: 0.5em 3em;
+    border: none;
+    border-radius: 1em;
+    background-color: peru;
+    color: white;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+button:hover {
+    transform: scale(90%);
+}
+
+.box {
+    height: 12em;
+    background-color: chocolate;
+}
