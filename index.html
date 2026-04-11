@@ -9,7 +9,7 @@
       function togglePlaylist(playlistId) {
         const playlist = document.getElementById(playlistId);
         const videoContainer = playlist.querySelector(".video-container");
-        if (videoContainer.style.display === "grid") {
+        if (videoContainer.style.display !== "none") {
           videoContainer.style.display = "none";
         } else {
           videoContainer.style.display = "grid";
