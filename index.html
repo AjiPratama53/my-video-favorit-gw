@@ -9,11 +9,8 @@
       function togglePlaylist(playlistId) {
         const playlist = document.getElementById(playlistId);
         const videoContainer = playlist.querySelector(".video-container");
-        if (videoContainer.style.display === "block") {
-          videoContainer.style.display = "none";
-        } else {
-          videoContainer.style.display = "block";
-        }
+        videoContainer.style.display =
+          videoContainer.style.display === "block" ? "none" : "block";
       }
     </script>
   </head>
@@ -25,22 +22,6 @@
       <div class="container">
         <div id="watch-now" class="playlist">
           <h2>Watch Now</h2>
-          <iframe
-            src="https://www.youtube.com/embed/i0cdKQsPPGA?si=tOfSZu9C6fl8fHgB"
-            title="YouTube video player"
-            frameborder="0"
-            allow="
-              accelerometer;
-              autoplay;
-              clipboard-write;
-              encrypted-media;
-              gyroscope;
-              picture-in-picture;
-              web-share;
-            "
-            referrerpolicy="strict-origin-when-cross-origin"
-            allowfullscreen
-          ></iframe>
         </div>
         <div id="pl-1" class="playlist">
           <button onclick="togglePlaylist('pl-1')">Playlist 1</button>

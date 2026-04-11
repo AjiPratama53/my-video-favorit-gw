@@ -1,7 +1,7 @@
-@font-face {
+/* @font-face {
     font-family: Minecraft;
     src: url("mac\'s\ Extended\ Minecraft.ttf");
-}
+} */
 
 body {
     margin: 2em;
@@ -13,17 +13,9 @@ body {
     display: flex;
     flex-direction: column;
     gap: 1em;
-    font-family: Minecraft;
+    font-family: sans-serif;
     color: white;
-}
-
-h2 {
-    text-shadow: 4px 4px gray;
-    /* box-shadow: 4px 4px gray; */
-}
-
-h1 {
-    text-shadow: 0 0 8px black;
+    text-shadow: 0 0 1em black;
 }
 
 header {
@@ -32,7 +24,6 @@ header {
 }
 
 iframe {
-    margin: 0 auto;
     border-radius: 8px;
 }
 
@@ -55,6 +46,7 @@ iframe {
 
 .video-container {
     display: none;
+    margin: 0 auto;
     /* grid-template-columns: 25% 25% 25% 25%; */
     gap: 2em;
 }
