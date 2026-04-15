@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Video Favorit Gw</title>
     <link rel="stylesheet" href="index.css" />
+    <link rel="script" href="index.js" />
     <script>
       function togglePlaylist(playlistId) {
         const playlist = document.getElementById(playlistId);
@@ -20,8 +21,39 @@
     </header>
     <main>
       <div class="container">
-        <div id="watch-now" class="playlist">
+        <div class="playlist">
           <h2>Watch Now</h2>
+          <div id="watch-now" class="video-container">
+            <input
+              type="text"
+              id="htmlInput"
+              placeholder="Enter HTML element"
+            />
+            <div id="outputContainer"></div>
+          </div>
+
+          <script>
+            function addHtmlElement() {
+              const input = document.getElementById("htmlInput");
+              const output = document.getElementById("outputContainer");
+              const htmlContent = input.value.trim();
+
+              if (htmlContent) {
+                const div = document.createElement("div");
+                div.innerHTML = htmlContent;
+                output.appendChild(div);
+                input.value = "";
+              }
+            }
+
+            document
+              .getElementById("htmlInput")
+              .addEventListener("keypress", (e) => {
+                if (e.key === "Enter") {
+                  addHtmlElement();
+                }
+              });
+          </script>
         </div>
         <div id="pl-1" class="playlist">
           <button onclick="togglePlaylist('pl-1')">Playlist 1</button>
