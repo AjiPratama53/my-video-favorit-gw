@@ -17,13 +17,19 @@
         <div class="playlist">
           <h2>Watch Now</h2>
           <div id="watch-now" class="video-container">
-            <input
-              type="text"
-              id="htmlInput"
-              placeholder="Enter embed code (mobile = 320x180px)"
-            />
+            <p>Desktop = 640x360px, Mobile = 360x180px</p>
+            <input type="text" id="htmlInput" placeholder="Enter embed code" />
             <div id="output-container"></div>
           </div>
+          <script>
+            document
+              .getElementById("htmlInput")
+              .addEventListener("keypress", (e) => {
+                if (e.key === "Enter") {
+                  addHtmlElement();
+                }
+              });
+          </script>
         </div>
         <div id="pl-1" class="playlist">
           <button onclick="togglePlaylist('pl-1')">Playlist 1</button>
