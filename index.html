@@ -6,14 +6,7 @@
     <title>My Video Favorit Gw</title>
     <link rel="stylesheet" href="index.css" />
     <link rel="script" href="index.js" />
-    <script>
-      function togglePlaylist(playlistId) {
-        const playlist = document.getElementById(playlistId);
-        const videoContainer = playlist.querySelector(".video-container");
-        videoContainer.style.display =
-          videoContainer.style.display === "block" ? "none" : "block";
-      }
-    </script>
+    <script src="index.js"></script>
   </head>
   <body>
     <header>
@@ -24,32 +17,13 @@
         <div class="playlist">
           <h2>Watch Now</h2>
           <div id="watch-now" class="video-container">
-            <input type="text" id="htmlInput" placeholder="Enter embed code" />
-            <div id="outputContainer"></div>
+            <input
+              type="text"
+              id="htmlInput"
+              placeholder="Enter embed code (mobile = 320x180px)"
+            />
+            <div id="output-container"></div>
           </div>
-
-          <script>
-            function addHtmlElement() {
-              const input = document.getElementById("htmlInput");
-              const output = document.getElementById("outputContainer");
-              const htmlContent = input.value.trim();
-
-              if (htmlContent) {
-                const div = document.createElement("div");
-                div.innerHTML = htmlContent;
-                output.appendChild(div);
-                input.value = "";
-              }
-            }
-
-            document
-              .getElementById("htmlInput")
-              .addEventListener("keypress", (e) => {
-                if (e.key === "Enter") {
-                  addHtmlElement();
-                }
-              });
-          </script>
         </div>
         <div id="pl-1" class="playlist">
           <button onclick="togglePlaylist('pl-1')">Playlist 1</button>
