@@ -11,9 +11,9 @@ function addHtmlElement() {
     const htmlContent = input.value.trim();
 
     if (htmlContent) {
-    const div = document.createElement("div");
-    div.innerHTML = htmlContent;
-    output.appendChild(div);
-    input.value = "";
+        const div = document.createElement("div");
+        div.innerHTML = htmlContent;
+        output.appendChild(div);
+        input.value = "";
     }
 }
