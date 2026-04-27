@@ -3,20 +3,27 @@
     src: url("mac\'s\ Extended\ Minecraft.ttf");
     } */
 
+iframe {
+    width: 33%;
+    aspect-ratio: 16 / 9;
+    border-radius: 8px;
+}
+
+.video-container {
+    width: 100%;
+    display: none;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    gap: 0.5em;
+}
+
 @media (max-width: 1280px) {
     .video-container {
-        display: flex;
         flex-direction: column;
     }
 
     iframe {
-        width: 80%;
-    }
-}
-
-@media (min-width: 1280px) {
-    iframe {
-        width: 30%;
+        width: 100%;
     }
 }
 
@@ -41,12 +48,6 @@ header {
     justify-content: center;
 }
 
-iframe {
-    height: auto;
-    aspect-ratio: 16 / 9;
-    border-radius: 8px;
-}
-
 .playlist {
     display: flex;
     flex-direction: column;
@@ -64,14 +65,9 @@ iframe {
     gap: 0.5em;
 }
 
-.video-container {
-    display: none;
-    margin: 0 auto;
-    /* grid-template-columns: 25% 25% 25% 25%; */
-    gap: 2em;
-}
 
-button {
+button,
+input {
     padding: 0.5em 3em;
     border: none;
     border-radius: 1em;
@@ -98,11 +94,14 @@ button:active {
 }
 
 input {
-    width: auto;
+    background-color: white;
+    width: 100%;
     padding: 10px;
-    margin-bottom: 10px
+    text-align: center;
+    color: black;
 }
 
 #output-container {
     width: 100%;
+    gap: 1em;
 }
